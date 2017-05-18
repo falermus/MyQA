@@ -96,23 +96,33 @@ public class Main {
         }
 
         /*
+         * Object
+         */
+        Animal theAnimal = new Animal(true, "Beast", 5);
+        System.out.println(theAnimal.isAlive);
+        System.out.println(theAnimal.name);
+        System.out.println(theAnimal.age);
+
+        /*
          * Polymorphism
          */
 
-//        Dog theDog = new Dog();
-//        System.out.println(theDog.bark);
-//
-//        Cat theCat = new Cat();
-//        System.out.println(theCat.meow);
-        Animal theAnimal = new Animal(true, "Beast", 5);
-        theAnimal.showAttributes();
-
         Dog theDog = new Dog();
-        theDog.setAttributes(true, "Spikey", 3);
-        theDog.showAttributes();
+        theDog.setAlive(true);
+        theDog.setName("Spikey");
+        theDog.setAge(3);
+        System.out.println(theDog.isAlive);
+        System.out.println(theDog.name);
+        System.out.println(theDog.age);
+        System.out.println(theDog.bark());
 
         Cat theCat = new Cat();
-        theCat.setAttributes(true, "Fuzzy", 2);
-        theCat.showAttributes();
+        theCat.setAlive(true);
+        theCat.setName("Fuzzy");
+        theCat.setAge(2);
+        System.out.println(theCat.isAlive);
+        System.out.println(theCat.name);
+        System.out.println(theCat.age);
+        System.out.println(theCat.meow());
     }
 }

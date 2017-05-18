@@ -1,8 +1,8 @@
 package Soal1;
 
 public class Cat extends Animal {
-    public void sound() {
-        System.out.println("Cat sound: meow!");
+    public String meow() {
+        return "Meow!";
     }
     Cat() {
         // Do nothing
