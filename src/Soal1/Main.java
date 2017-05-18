@@ -2,44 +2,7 @@ package Soal1;
 
 import java.util.ArrayList;
 
-/**
- * Created by falerymustika on 5/15/17.
- */
 public class Main {
-
-    public class Animal {
-        boolean isAlive;
-        String name;
-        int age;
-        Animal() {
-            isAlive = true;
-            name = "Unknown";
-            age = 0;
-            //System.out.println("Is it alive? " + isAlive + "\nIts name is" + name + "\nIts age is " + age + "year(s) old");
-        }
-
-        Animal(boolean isItAlive, String itsName, int itsAge) {
-            isAlive = isItAlive;
-            name = itsName;
-            age = itsAge;
-            System.out.println("Is it alive? " + isAlive + "\nIts name is" + name + "\nIts age is " + age + "year(s) old");
-        }
-    }
-
-    public class Dog extends Animal {
-        public String bark;
-        Dog() {
-            bark = "woof";
-        }
-    }
-
-    public class Cat extends Animal {
-        public String meow;
-        Cat() {
-            meow = "meow";
-        }
-    }
-
     public static int mySquare(int input) {
         return (input * input);
     }
@@ -49,11 +12,11 @@ public class Main {
             System.out.println(input + " is an even number.");
         }
         else {
-            System.out.println(input + " is an odd number");
+            System.out.println(input + " is an odd number.");
         }
     }
 
-    public void main(String[] args) {
+    public static void main(String[] args) {
         /*
          * Variables
          */
@@ -74,8 +37,14 @@ public class Main {
         double luas = (panjang * tinggi)/((double)2);
         System.out.println(luas);
 
-        boolean myLogic = ((10 < 5) && (6 > 4));
-        System.out.println(myLogic);
+        boolean myLogic1 = ((10 < 5) && (6 > 4));
+        System.out.println(myLogic1);
+
+        boolean myLogic2 = !((3 > 2) && (4 > 3));
+        System.out.println(myLogic2);
+
+        boolean myLogic3 = !((3 < 2) || (4 < 3));
+        System.out.println(myLogic3);
 
         /*
          * Function
@@ -130,10 +99,23 @@ public class Main {
          * Polymorphism
          */
 
+//        Dog theDog = new Dog();
+//        System.out.println(theDog.bark);
+//
+//        Cat theCat = new Cat();
+//        System.out.println(theCat.meow);
+        Animal theAnimal = new Animal(true, "Beast", 5);
+        System.out.println(theAnimal.name + " " + theAnimal.age + " year(s) " + theAnimal.isAlive + " alive");
+        theAnimal.sound();
+
         Dog theDog = new Dog();
-        System.out.println(theDog.bark);
+        theDog.setAttributes(true, "Spikey", 3);
+        System.out.println(theDog.name + " " + theDog.age + " year(s) " + theDog.isAlive + " alive");
+        theDog.sound();
 
         Cat theCat = new Cat();
-        System.out.println(theCat.meow);
+        theCat.setAttributes(true, "Fuzzy", 2);
+        System.out.println(theCat.name + " " + theCat.age + " year(s) " + theCat.isAlive + " alive");
+        theCat.sound();
     }
 }
