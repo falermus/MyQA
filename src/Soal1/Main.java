@@ -105,17 +105,14 @@ public class Main {
 //        Cat theCat = new Cat();
 //        System.out.println(theCat.meow);
         Animal theAnimal = new Animal(true, "Beast", 5);
-        System.out.println(theAnimal.name + " " + theAnimal.age + " year(s) " + theAnimal.isAlive + " alive");
-        theAnimal.sound();
+        theAnimal.showAttributes();
 
         Dog theDog = new Dog();
         theDog.setAttributes(true, "Spikey", 3);
-        System.out.println(theDog.name + " " + theDog.age + " year(s) " + theDog.isAlive + " alive");
-        theDog.sound();
+        theDog.showAttributes();
 
         Cat theCat = new Cat();
         theCat.setAttributes(true, "Fuzzy", 2);
-        System.out.println(theCat.name + " " + theCat.age + " year(s) " + theCat.isAlive + " alive");
-        theCat.sound();
+        theCat.showAttributes();
     }
 }

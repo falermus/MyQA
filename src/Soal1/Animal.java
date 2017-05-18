@@ -11,6 +11,11 @@ public class Animal {
         age = itsAge;
     }
 
+    public void showAttributes() {
+        System.out.println(name + " " + age + " year(s) old " + isAlive + " alive");
+        sound();
+    }
+
     public void sound() {
         System.out.println("Animal sound: howl!");
     }

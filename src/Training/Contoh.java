@@ -1,8 +1,5 @@
 package Training;
 
-/**
- * Created by falerymustika on 5/17/17.
- */
 public class Contoh {
 
     public static int mySquare(int input) {
@@ -33,14 +30,8 @@ public class Contoh {
         int x2 = 8;
         int x3 = 10;
 
-
         System.out.println(isEven(x1));
         System.out.println(isEven(x2));
         System.out.println(isEven(x3));
-
-
-
-
-
     }
 }
